@@ -8,6 +8,5 @@ div .full-width-table {
 }
 
 .small-table{
-  overflow-y: scroll !important;
   overflow-x: scroll !important;
 }
