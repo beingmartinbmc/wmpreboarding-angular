@@ -1,0 +1,13 @@
+div .full-width-table {
+  max-height: 600px !important;
+}
+
+.full-width-table {
+  width: 100%;
+  max-height: 550px !important;
+}
+
+.small-table{
+  overflow-y: scroll !important;
+  overflow-x: scroll !important;
+}
