@@ -1,0 +1,31 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Buddy Name</th>
+    <th scope="col">HM Name</th>
+    <th scope="col">HM Email</th>
+    <th scope="col">Buddy Email</th>
+    <th scope="col">Joining Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let associate of associates">
+    <td>{{associate.name}}</td>
+    <td>{{associate.email}}</td>
+    <td>{{associate.buddyName}}</td>
+    <td>{{associate.hmName}}</td>
+    <td>{{associate.hmEmail}}</td>
+    <td>{{associate.buddyEmail}}</td>
+    <td>{{associate.joiningDate}}</td>
+    <td>
+      <div class="d-grid gap-2 d-md-flex" >
+        <button type="button" class="btn btn-success" (click)="buddyConnect(associate)">Buddy Connect</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" (click)="hmConnect(associate)">HM Connect</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
