@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="joiningDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Joining Date</th>
+      <td mat-cell *matCellDef="let row">{{row.joiningDate| date }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+      <td mat-cell *matCellDef="let row">{{row.email}}</td>
+    </ng-container>
+
+    <!-- Order Total Column -->
+    <ng-container matColumnDef="hmEmail">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>HM Email</th>
+      <td mat-cell *matCellDef="let row">{{row.hmEmail}}</td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="joiningStatus">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Joining Status</th>
+      <td mat-cell *matCellDef="let row">
+        <mat-chip-list>
+          <mat-chip
+            color="{{ row.joiningStatus == 1 ? 'primary' : ( row.joiningStatus == 2 ? 'accent' : 'warn' ) }}"
+            selected>
+            {{row.status}}
+          </mat-chip>
+        </mat-chip-list>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="dataLength" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[10, 20]">
+  </mat-paginator>
+</div>
