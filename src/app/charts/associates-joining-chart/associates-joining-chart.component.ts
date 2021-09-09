@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import {Component, OnInit} from '@angular/core';
+import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
+import {Color, Label} from 'ng2-charts';
 import {AssociateService} from '../../services/associate.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AssociatesJoiningChartComponent implements OnInit {
   errorMessage: string;
 
   public associatesChartData: ChartDataSets[] = [
-    { data: [], label: 'Total Associates' },
+    {data: [], label: 'Total Associates'},
   ];
 
   public associateChartLabels: Label[] = [];
@@ -31,7 +31,8 @@ export class AssociatesJoiningChartComponent implements OnInit {
   public associatesChartType: ChartType = 'line';
   public associatesChartPlugins = [];
 
-  constructor(private associateService: AssociateService) { }
+  constructor(private associateService: AssociateService) {
+  }
 
   ngOnInit() {
     this.associateService.getAssociatesDataByMonth().subscribe({

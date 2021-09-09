@@ -1,11 +1,11 @@
 <div class="chart-cnt">
-  <canvas baseChart width="400" height="400"
-    [datasets]="associatesChartData"
-    [labels]="associateChartLabels"
-    [options]="associatesChartOptions"
-    [colors]="associatesChartColors"
-    [legend]="associatesChartLegend"
-    [chartType]="associatesChartType"
-    [plugins]="associatesChartPlugins">
+  <canvas [chartType]="associatesChartType" [colors]="associatesChartColors" [datasets]="associatesChartData"
+          [labels]="associateChartLabels"
+          [legend]="associatesChartLegend"
+          [options]="associatesChartOptions"
+          [plugins]="associatesChartPlugins"
+          baseChart
+          height="400"
+          width="400">
   </canvas>
 </div>

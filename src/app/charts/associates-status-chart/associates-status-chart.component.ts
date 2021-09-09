@@ -24,13 +24,12 @@ export class AssociatesStatusChartComponent implements OnInit {
     backgroundColor: ['rgba(135,206,250,1)', 'rgba(106,90,205,1)', 'rgba(148,159,177,1)'],
     borderColor: ['rgba(135,206,250,1)', 'rgba(106,90,205,1)', 'rgba(148,159,177,1)']
   }];
-
-  constructor(private associateService: AssociateService) {
-  }
-
   will = 0;
   maybe = 0;
   wont = 0;
+
+  constructor(private associateService: AssociateService) {
+  }
 
   ngOnInit() {
     this.associateService.getUnpagedAssociates().subscribe({

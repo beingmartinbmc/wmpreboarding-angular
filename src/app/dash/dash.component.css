@@ -6,6 +6,6 @@ app-line-chart, app-bar-chart, app-radar-chart, app-pie-chart {
   flex-grow: 1;
 }
 
-app-table{
+app-table {
   height: 700px !important;
 }

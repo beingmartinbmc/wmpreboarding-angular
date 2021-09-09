@@ -24,8 +24,17 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {AssociatesJoiningChartComponent} from './charts/associates-joining-chart/associates-joining-chart.component';
-import { AssociatesStatusChartComponent } from './charts/associates-status-chart/associates-status-chart.component';
+import {AssociatesStatusChartComponent} from './charts/associates-status-chart/associates-status-chart.component';
 import {AssociatesTableComponent} from './associates-table/associates-table.component';
+import {InvitesComponent} from './invites/invites.component';
+import {InvitesTableComponent} from './invites-table/invites-table.component';
+import {FeedbackComponent} from './modals/feedback/feedback.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -35,7 +44,10 @@ import {AssociatesTableComponent} from './associates-table/associates-table.comp
     CardComponent,
     AssociatesTableComponent,
     AssociatesJoiningChartComponent,
-    AssociatesStatusChartComponent
+    AssociatesStatusChartComponent,
+    InvitesComponent,
+    InvitesTableComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +68,14 @@ import {AssociatesTableComponent} from './associates-table/associates-table.comp
     MatSortModule,
     MatChipsModule,
     MatProgressBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

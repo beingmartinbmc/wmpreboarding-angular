@@ -57,6 +57,10 @@ export class AssociateService {
     );
   }
 
+  getAssociatesDataByMonth(): Observable<MonthlyAssociate[]> {
+    return this.http.get<MonthlyAssociate[]>(this.associatesMonthlyDataURL).pipe(catchError(this.handleError));
+  }
+
   private getSortedData(data: Associate[], active: string, direction: string) {
     if (!active || direction === '') {
       return data;
@@ -81,10 +85,6 @@ export class AssociateService {
           return 0;
       }
     });
-  }
-
-  getAssociatesDataByMonth(): Observable<MonthlyAssociate[]> {
-    return this.http.get<MonthlyAssociate[]>(this.associatesMonthlyDataURL).pipe(catchError(this.handleError));
   }
 
   private handleError(err: HttpErrorResponse) {

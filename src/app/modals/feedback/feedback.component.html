@@ -1,0 +1,49 @@
+<div mat-dialog-content>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" id="bootstrap-css" rel="stylesheet">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+
+  <div class="container contact">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="contact-info">
+          <img alt="image" src="https://image.ibb.co/kUASdV/contact-image.png"/>
+          <h2>Feedback</h2>
+          <h4>We would love to hear from you!</h4>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="comment">Feedback:</label>
+            <div class="col-sm-10">
+              <textarea
+                [(ngModel)]="feedback"
+                class="form-control"
+                id="comment"
+                name="comment"
+                rows="5">
+              </textarea>
+            </div>
+          </div>
+          <label id="joining-status">Will the associate join?</label>
+          <mat-radio-group
+            [(ngModel)]="status"
+            aria-labelledby="example-radio-group-label"
+            class="radio-group">
+            <mat-radio-button *ngFor="let choice of choices" [value]="choice" class="radio-button">
+              {{ choice }}
+            </mat-radio-button>
+          </mat-radio-group>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button (click)="print()" class="btn btn-default" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{data}}

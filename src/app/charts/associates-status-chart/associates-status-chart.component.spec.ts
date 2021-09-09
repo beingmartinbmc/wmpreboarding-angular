@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AssociatesStatusChartComponent } from './associates-status-chart.component';
+import {AssociatesStatusChartComponent} from './associates-status-chart.component';
 
 describe('AssociatesStatusChartComponent', () => {
   let component: AssociatesStatusChartComponent;
@@ -8,9 +8,9 @@ describe('AssociatesStatusChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AssociatesStatusChartComponent ]
+      declarations: [AssociatesStatusChartComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

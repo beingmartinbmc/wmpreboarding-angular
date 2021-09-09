@@ -1,12 +1,12 @@
 <div class="chart-cnt">
-  <canvas baseChart
+  <canvas [chartType]="associateChartType"
+          [colors]="associateChartColors"
           [data]="associateChartData"
           [labels]="associateChartLabels"
-          [options]="associateChartOptions"
           [legend]="associateChartLegend"
-          [chartType]="associateChartType"
-          [colors]="associateChartColors"
-          [plugins]="associateChartPlugins">
+          [options]="associateChartOptions"
+          [plugins]="associateChartPlugins"
+          baseChart>
   </canvas>
 </div>
 

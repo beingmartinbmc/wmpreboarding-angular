@@ -6,6 +6,7 @@
         <app-associates-joining-chart></app-associates-joining-chart>
       </app-card>
     </mat-grid-tile>
+
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
       <app-card title="Associates joining status">
         <app-associates-status-chart></app-associates-status-chart>
@@ -18,5 +19,6 @@
         <app-associates-table></app-associates-table>
       </app-card>
     </mat-grid-tile>
+
   </mat-grid-list>
 </div>

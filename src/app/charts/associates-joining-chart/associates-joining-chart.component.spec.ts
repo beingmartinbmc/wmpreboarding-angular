@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AssociatesJoiningChartComponent } from './associates-joining-chart.component';
+import {AssociatesJoiningChartComponent} from './associates-joining-chart.component';
 
 describe('AssociatesJoiningChartComponent', () => {
   let component: AssociatesJoiningChartComponent;
@@ -8,9 +8,9 @@ describe('AssociatesJoiningChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AssociatesJoiningChartComponent ]
+      declarations: [AssociatesJoiningChartComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

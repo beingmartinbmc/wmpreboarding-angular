@@ -1,0 +1,12 @@
+<div class="grid-container">
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+
+    <!--Table-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Invite List">
+        <app-invites-table></app-invites-table>
+      </app-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
